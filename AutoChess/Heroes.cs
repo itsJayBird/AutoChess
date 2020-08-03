@@ -8,5 +8,15 @@ namespace AutoChess
 {
     class Heroes : BattleLogic, Allegience
     {
+
+        public Heroes(int ID)
+        {
+
+        }
+
+        public void CheckAllegienceBonus()
+        {
+            
+        }
     }
 }

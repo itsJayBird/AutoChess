@@ -8,5 +8,6 @@ namespace AutoChess
 {
     interface Allegience
     {
+        void CheckAllegienceBonus();
     }
 }

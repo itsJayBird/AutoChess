@@ -8,5 +8,13 @@ namespace AutoChess
 {
     abstract class BattleLogic
     {
+        void canMove(int row, int col)
+        {
+
+        }
+        void pickTarget(int row, int col, int range)
+        {
+
+        }
     }
 }

@@ -55,8 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Battle.xaml.cs">
-      <DependentUpon>Battle.xaml</DependentUpon>
+    <Compile Include="BattleSreen.xaml.cs">
+      <DependentUpon>BattleSreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Game.cs" />
     <Compile Include="Home.xaml.cs">
@@ -75,7 +75,7 @@
     <Compile Include="ShopScreen.xaml.cs">
       <DependentUpon>ShopScreen.xaml</DependentUpon>
     </Compile>
-    <Page Include="Battle.xaml">
+    <Page Include="BattleSreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

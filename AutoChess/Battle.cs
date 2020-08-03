@@ -8,5 +8,9 @@ namespace AutoChess
 {
     class Battle
     {
+        public Battle()
+        {
+            
+        }
     }
 }
