@@ -71,8 +71,8 @@
       <DependentUpon>Scorescreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Shop.cs" />
-    <Compile Include="Shop.xaml.cs">
-      <DependentUpon>Shop.xaml</DependentUpon>
+    <Compile Include="ShopScreen.xaml.cs">
+      <DependentUpon>ShopScreen.xaml</DependentUpon>
     </Compile>
     <Page Include="Battle.xaml">
       <SubType>Designer</SubType>
@@ -107,7 +107,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Shop.xaml">
+    <Page Include="ShopScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

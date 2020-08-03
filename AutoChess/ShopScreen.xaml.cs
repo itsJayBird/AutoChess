@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace AutoChess
 {
     /// <summary>
-    /// Interaction logic for Shop.xaml
+    /// Interaction logic for ShopScreen.xaml
     /// </summary>
-    public partial class Shop : Page
+    public partial class ShopScreen : Page
     {
-        public Shop()
+        public ShopScreen()
         {
             InitializeComponent();
         }
