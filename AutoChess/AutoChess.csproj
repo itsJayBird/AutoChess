@@ -58,6 +58,7 @@
     <Compile Include="BattleSreen.xaml.cs">
       <DependentUpon>BattleSreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataManager.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
