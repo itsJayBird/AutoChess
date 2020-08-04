@@ -7,7 +7,22 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="HeroViewer">
-    <Grid Background="White">
-        
-    </Grid>
+    <Border Background="White">
+        <Grid Margin="10 10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <!-- title -->
+                <TextBlock Text="Hero Library"
+                           FontSize="30"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+               <!-- Hero List -->
+                <datata
+
+            </Grid>
+        </Grid>
+    </Border>
 </Page>
