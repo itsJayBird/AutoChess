@@ -26,19 +26,19 @@ namespace AutoChess
         {
             InitializeComponent();
             data.readHeroesList();
-            HeroDataBase = data.getHeroDataBase();
+            HeroDataBase = data.HeroDatabase;
             string heroList = "";
             int i;
             double k;
             double statSum = 0;
             string[] statNames = { "ID:", "Name:", "Attack:", "Defense:", "Attack Speed:", "Health:", "Range:" };
-            foreach(KeyValuePair<int, object[]> hero in HeroDataBase)
+            foreach (KeyValuePair<int, object[]> hero in HeroDataBase)
             {
                 i = 0;
                 object[] tempHero = hero.Value;
                 heroList += statNames[i] + " " + hero.Key;
                 i++;
-                foreach(object stat in tempHero)
+                foreach (object stat in tempHero)
                 {
                     heroList += "\n" + statNames[i] + " " + stat;
                     if (double.TryParse(stat.ToString(), out k))

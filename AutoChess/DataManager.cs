@@ -1,27 +1,52 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Shapes;
 
 namespace AutoChess
 {
     class DataManager
     {
-        private string dir;
-        private Dictionary<int, object[]> HeroDatabase = new Dictionary<int, object[]>();
+        public Dictionary<int, object[]> HeroDatabase { get; private set; }
         public DataManager()
         {
-            dir = Environment.CurrentDirectory;
+            HeroDatabase = new Dictionary<int, object[]>();
+        }
+        private static UnmanagedMemoryStream GetResourceStream(string resName)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var strResources = assembly.GetName().Name + ".g.resources";
+            var rStream = assembly.GetManifestResourceStream(strResources);
+            var resourceReader = new ResourceReader(rStream);
+            var items = resourceReader.OfType<DictionaryEntry>();
+            var stream = items.First(x => (x.Key as string) == resName.ToLower()).Value;
+            return (UnmanagedMemoryStream)stream;
         }
         public void readHeroesList()
         {
             // first pull all the heroes from file
-            string[] heroesRAWList = System.IO.File.ReadAllLines(dir + "\\heroes.sav");
-
+            string resName = "heroes.txt";
+            var file = GetResourceStream(resName);
+            List<string> heroes = new List<string>();
+            using(var reader = new StreamReader(file))
+            {
+                string line = "";
+                do
+                {
+                    line = (string)reader.ReadLine();
+                    heroes.Add(line);
+                } while (line.Length > 0);
+            }
             // next we take each string and parse through it to extract hero information
             int j = 0, i;
-            foreach (string hero in heroesRAWList)
+            foreach (string hero in heroes)
             {
                 i = 0;
                 // split stats into new array and create a placeholder
@@ -46,10 +71,6 @@ namespace AutoChess
                 HeroDatabase.Add(j, tempHero);
                 j++;
             }
-        }
-        public Dictionary<int, object[]> getHeroDataBase()
-        {
-            return HeroDatabase;
         }
     }
 }

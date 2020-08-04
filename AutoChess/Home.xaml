@@ -7,8 +7,51 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Home">
+    <Page.Resources>
+        <RoutedUICommand x:Key="ViewHeroes"/>
+        <RoutedUICommand x:Key="PlayGame"/>
+    </Page.Resources>
+    <Page.CommandBindings>
+        <CommandBinding x:Name="ViewHeroes" 
+                        Command="{StaticResource ViewHeroes}"
+                        CanExecute="ViewHeroes_CanExecute"
+                        Executed="ViewHeroes_Executed"/>
+        <CommandBinding x:Name="PlayGame"
+                        Command="{StaticResource PlayGame}"
+                        CanExecute="PlayGame_CanExecute"
+                        Executed="PlayGame_Executed"/>
+    </Page.CommandBindings>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Some AutoChess Rip Off"
+                   FontSize="40"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+        <Border Grid.Row="1"
+                BorderBrush="Gray"
+                BorderThickness="0 1 0 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="ViewHeroesButton"
+                    Content="View Heroes"
+                    FontSize="24"
+                    Height="100"
+                    Width="200"
+                    Command="{StaticResource ViewHeroes}"/>
+                <Button x:Name="PlayGameButton"
+                    Content="Play Game"
+                    FontSize="24"
+                    Height="100"
+                    Width="200"
+                    Grid.Column="1"/>
+            </Grid>
+        </Border>
 
-    <Grid>
-        
     </Grid>
 </Page>

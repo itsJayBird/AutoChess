@@ -6,6 +6,12 @@
         xmlns:local="clr-namespace:AutoChess"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        ShowsNavigationUI="False">
+        ShowsNavigationUI="False"
+        Source="Home.xaml">
+    <NavigationWindow.Resources>
+        
+    </NavigationWindow.Resources>
+    <NavigationWindow.CommandBindings>
 
+    </NavigationWindow.CommandBindings>
 </NavigationWindow>

@@ -24,5 +24,24 @@ namespace AutoChess
         {
             InitializeComponent();
         }
+        private void ViewHeroes_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void ViewHeroes_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("This Works");
+        }
+
+        private void PlayGame_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+
+        }
+
+        private void PlayGame_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
     }
 }

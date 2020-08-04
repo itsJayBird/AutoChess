@@ -1,0 +1,8 @@
+﻿Storm Spirit, 50, 10, 0.67, 450, 3
+Morphling, 45, 15, 0.72, 475, 2
+Crystal Mage, 110, 5, 0.35, 550, 4
+Blood Seeker, 30, 25, 1.33, 350, 1
+Shadow Fiend, 40, 40, 0.88, 650, 2
+Keeper of Light, 175, 0, 0.12, 800, 4
+Pudge, 15, 80, 0.53, 975, 1
+Omniknight, 30, 55, 0.47, 775, 1
