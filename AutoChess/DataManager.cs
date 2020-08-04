@@ -35,14 +35,16 @@ namespace AutoChess
             string resName = "heroes.txt";
             var file = GetResourceStream(resName);
             List<string> heroes = new List<string>();
-            using(var reader = new StreamReader(file))
+            var reader = new StreamReader(file);
             {
                 string line = "";
-                do
+                while(line != null)
                 {
-                    line = (string)reader.ReadLine();
+                    line = reader.ReadLine();
+                    if (line == null)
+                        break;
                     heroes.Add(line);
-                } while (line.Length > 0);
+                };
             }
             // next we take each string and parse through it to extract hero information
             int j = 0, i;
